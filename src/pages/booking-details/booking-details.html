@@ -1,0 +1,131 @@
+<!--
+  Generated template for the BookingDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Booking Details</ion-title>
+    <ion-buttons end>
+            <button ion-button icon-only (click)="navigateToRoot()">
+              <ion-icon name="home" ></ion-icon>
+            </button>
+          </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-content>
+            <ion-list radio-group>
+                <ion-list-header>
+                  Select Starter
+                </ion-list-header>
+              
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                      </ion-avatar>
+                  <ion-label>Chicken Chilli</ion-label>
+                  <ion-radio checked="ChiekcnChilli" value="go"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                      </ion-avatar>
+                  <ion-label>Chicken Wedges</ion-label>
+                  <ion-radio value="ChickenWedges"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                      </ion-avatar>
+                  <ion-label>Skillet Paneer Kabab</ion-label>
+                  <ion-radio value="SkilletPaneerKabab"></ion-radio>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+        <ion-card-content>
+            <ion-list radio-group>
+                <ion-list-header>
+                  Select Main Course
+                </ion-list-header>
+              
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                      </ion-avatar>
+                  <ion-label>Chicken Butter Masala</ion-label>
+                  <ion-radio checked="ChiekcnButterMasala" value="go"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img [src]="'./assets/imgs/Badam_Kheer_Recipe_Indian_Spiced_Almond_Milk-1.jpg'">
+                      </ion-avatar>
+                  <ion-label>Chicken hariyali</ion-label>
+                  <ion-radio value="ChickenHariyali"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img [src]="'./assets/imgs/Badam_Kheer_Recipe_Indian_Spiced_Almond_Milk-1.jpg'">
+                      </ion-avatar>
+                  <ion-label>Paneer Masala</ion-label>
+                  <ion-radio value="PaneerMasala"></ion-radio>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+
+      </ion-card>  
+      
+      <ion-card>
+          <ion-card-content>
+              <ion-list radio-group>
+                  <ion-list-header>
+                    Select Dessert
+                  </ion-list-header>
+                
+                  <ion-item>
+                      <ion-avatar item-start>
+                          <img [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                        </ion-avatar>
+                    <ion-label>Gulab Jamun</ion-label>
+                    <ion-radio checked="ChiekcnButterMasala" value="go"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                      <ion-avatar item-start>
+                          <img [src]="'./assets/imgs/Badam_Kheer_Recipe_Indian_Spiced_Almond_Milk-1.jpg'">
+                        </ion-avatar>
+                    <ion-label>Chicken hariyali</ion-label>
+                    <ion-radio value="ChickenHariyali"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item>
+                      <ion-avatar item-start>
+                          <img [src]="'./assets/imgs/Badam_Kheer_Recipe_Indian_Spiced_Almond_Milk-1.jpg'">
+                        </ion-avatar>
+                    <ion-label>Paneer Masala</ion-label>
+                    <ion-radio value="PaneerMasala"></ion-radio>
+                  </ion-item>
+                </ion-list>
+          </ion-card-content>
+  
+        </ion-card>  
+</ion-content>
+<ion-footer no-shadow>
+    <ion-toolbar position="bottom">
+        <button ion-button full (click) ="navigateToCostBreakup()">Review Selections and Book</button>
+    </ion-toolbar>
+  </ion-footer>

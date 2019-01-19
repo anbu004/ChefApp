@@ -1,0 +1,28 @@
+page-user-inputs {
+    .text-input-md {
+        margin: 8px 8px;
+    }
+    .datetime-md {
+        padding: 6px 0px 1px 9px;
+    }
+    // .input-wrapper {
+    //     border: 1px solid #e0dbdb !important;
+    //     height: 54% !important;
+    //     font-size:13px;
+    //     border-radius:4px;
+    // }
+//     .list-md {
+//         margin: 29px 0 16px;
+//     }
+//     .list-md .item-block .item-inner {
+//         border-bottom: none !important;
+//     }
+//     .list-md .item-block .item-inner:focus {
+//         border-bottom: none !important;
+//     }
+    .item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner {
+  box-shadow: none !important;
+}
+
+}

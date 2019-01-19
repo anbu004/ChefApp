@@ -1,0 +1,102 @@
+<ion-content padding class="transparent-header">
+   <ion-header>
+      <ion-navbar>
+            <ion-buttons end>
+                    <button ion-button icon-only (click)="navigateToRoot()">
+                      <ion-icon name="home" ></ion-icon>
+                    </button>
+                  </ion-buttons>
+      </ion-navbar>
+   </ion-header>
+   <div id="profile-bg"></div>
+   <div id="content">
+      <div id="profile-info" padding *ngFor="let item of items">
+            <div *ngIf="showProfile(chefId,item.id)">
+                  <img id="profile-image" [src]="'./assets/imgs/Butter_chicken_recipe.jpg'">
+                  <h3 id="profile-name">{{item.fullName}}</h3>
+                  <p>Master Chef &bull; {{item.homeTown}}</p>
+                  <p class="profile-description">{{item.description}}</p>         
+            </div>
+      </div>
+      <button ion-button (click)="navigateToBookingPage()">Book Me</button>
+   </div>
+   <hr/>
+      <!-- <ion-slides pager="true">
+         <ion-slide *ngFor = "let slide of slider">
+            <img [src]= "slide.image"/>
+            <h2 [innerHTML]="slide.title"></h2>
+         </ion-slide>
+      </ion-slides>  -->
+
+      <ion-segment [(ngModel)]="Specialities">
+            <ion-segment-button value="Veg">
+              Veg
+            </ion-segment-button>
+            <ion-segment-button value="Non-Veg">
+              Non-Veg
+            </ion-segment-button>
+            <ion-segment-button value="Dessert">
+                  Dessert
+            </ion-segment-button>
+      </ion-segment>
+
+      <div [ngSwitch]="Specialities">
+      <ion-list *ngSwitchCase = "'Veg'">
+         <ion-grid>
+            <ion-row justify-content-center>
+              <ion-col col-4 *ngFor="let slide of sliderVeg">
+                <ion-card>
+                   <ion-img width="100" height="100" [src]="slide.image" class="imgCardMain"></ion-img>
+                  <ion-card-content>
+                        <ion-card-title>
+                          <span class='overflow-me'>{{ slide.title }}</span>
+                         </ion-card-title>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+         </ion-grid>
+      </ion-list>
+      </div>
+
+      <div [ngSwitch]="Specialities">
+            <ion-list *ngSwitchCase = "'Non-Veg'">
+               <ion-grid>
+                  <ion-row justify-content-center>
+                    <ion-col col-4 *ngFor="let slide of sliderNonVeg">
+                      <ion-card>
+                         <ion-img width="100" height="100" [src]="slide.image" class="imgCardMain"></ion-img>
+                        <ion-card-content>
+                              <ion-card-title>
+                                <span class='overflow-me'>{{ slide.title }}</span>
+                               </ion-card-title>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-col>
+                  </ion-row>
+               </ion-grid>
+            </ion-list>
+            </div>
+
+            <div [ngSwitch]="Specialities">
+                  <ion-list *ngSwitchCase = "'Dessert'">
+                     <ion-grid>
+                        <ion-row justify-content-center>
+                          <ion-col col-4 *ngFor="let slide of sliderDessert">
+                            <ion-card>
+                               <ion-img width="100" height="100" [src]="slide.image" class="imgCardMain"></ion-img>
+                              <ion-card-content>
+                                    <ion-card-title>
+                                      <span class='overflow-me'>{{ slide.title }}</span>
+                                     </ion-card-title>
+                              </ion-card-content>
+                            </ion-card>
+                          </ion-col>
+                        </ion-row>
+                     </ion-grid>
+                  </ion-list>
+                  </div>
+</ion-content>
+   
+<!-- <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div> -->
+<!-- <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div> -->

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label floating>Phone Number</ion-label>
+        <ion-input type="number"  required></ion-input>
+      </ion-item>
+      <br>
+
+  <button ion-button color="light" full (click)="openOTPinputPanel()">Continue</button>
+  <br>
+  <p align="center">or</p><br>
+  <button ion-button color="danger" block (click)="loginGoogle()">Continue with Google</button>
+
+  <!-- <div id="footer"> <button ion-button clear (click) = "chefLogin()">Chef Login</button></div> -->
+ 
+  <!-- <button ion-button (click)="ontoggleclick()">Navigate to select chef</button> -->
+
+  <!-- <p>Name: {{user.name}}</p>
+  <p>Email: {{user.email}}</p>
+  <p>UserID: {{user.userId}}</p>
+  <img [src] = "user.image" alt=""> -->
+</ion-content>

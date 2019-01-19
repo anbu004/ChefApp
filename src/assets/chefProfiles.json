@@ -1,0 +1,127 @@
+[
+  {
+    "id": "1",
+    "description": "Karunakar has been a cook since the last 7 years having experice in various cuisines",
+    "profileImage": "https://via.placeholder.com/150/92c952",
+    "fullName": "Karunakar Malik",
+    "averageRating": "4.5",
+    "bookingCost": "300",
+    "totalReviews": "50",
+    "homeTown": "Orrisa",
+    "bestPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Chicken Butter Masala",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Kheer",
+        "prepThumbnail": "https://via.placeholder.com/150/771796"
+      }
+    ],
+    "allPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Chicken Butter Masala",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952",
+        "prepType": "M"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Kheer",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "D"
+      },
+      {
+        "prepId": "3",
+        "prepName": "Paneer do Pyaza",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "M"
+      },
+      {
+        "prepId": "4",
+        "prepName": "Custard",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "D"
+      },
+      {
+        "prepId": "5",
+        "prepName": "French Fries",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "S"
+      },
+      {
+        "prepId": "6",
+        "prepName": "Chicken Hariyali",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "M"
+      },
+      {
+        "prepId": "7",
+        "prepName": "Shorba",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "S"
+      },
+      {
+        "prepId": "8",
+        "prepName": "Dal Fry",
+        "prepThumbnail": "https://via.placeholder.com/150/771796",
+        "prepType": "M"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Hindi"
+      },
+      {
+        "language": "English"
+      },
+      {
+        "language": "Telgu"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewId": "1",
+        "shortReview": "Its was delicious",
+        "rating": "5",
+        "long Review": "Excellent work. Would recommend him again and again",
+        "reviewerName": "Test User1",
+        "reviewerProfileImage": "https://via.placeholder.com/150/771796"
+      },
+      {
+        "reviewId": "2",
+        "shortReview": "Its was delicious",
+        "rating": "4",
+        "long Review": "Good work. Would recommend him again and again",
+        "reviewerName": "Test User2",
+        "reviewerProfileImage": "https://via.placeholder.com/150/771795"
+      },
+      {
+        "reviewId": "3",
+        "shortReview": "Its okay",
+        "rating": "3",
+        "long Review": "Okay work. Would not recommend him again and again",
+        "reviewerName": "Test User3",
+        "reviewerProfileImage": "https://via.placeholder.com/150/771796"
+      },
+      {
+        "reviewId": "4",
+        "shortReview": "Its was good",
+        "rating": "3",
+        "long Review": "Bad work. Did not like the taste of the food",
+        "reviewerName": "Test User4",
+        "reviewerProfileImage": "https://via.placeholder.com/150/771793"
+      },
+      {
+        "reviewId": "5",
+        "shortReview": "Its was excellent",
+        "rating": "5",
+        "long Review": "Excellent work. Would recommend him again and again",
+        "reviewerName": "Test User5",
+        "reviewerProfileImage": "https://via.placeholder.com/150/771796"
+      }
+    ]
+  }
+]

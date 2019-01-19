@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "description": "accusamus beatae ad facilis cum similique qui sunt",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+    "FullName": "Jacob Thomas",
+    "AverageRating": "4.5",
+    "bookingCost": "300",
+    "totalReviews": "50",
+    "bestPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Chicken Butter Masala",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Kheer",
+        "prepThumbnail": "https://via.placeholder.com/150/771796"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "description": "accusamus beatae ad facilis cum similique qui sunt",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796",
+    "FullName": "Ramesh Kumar",
+    "AverageRating": "4.0",
+    "bookingCost": "200",
+    "totalReviews": "34",
+    "bestPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Chicken Hariyali",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Chocolate mousse",
+        "prepThumbnail": "https://via.placeholder.com/150/771796"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "description": "accusamus beatae ad facilis cum similique qui sunt",
+    "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+    "FullName": "Kamlesh Kumar",
+    "AverageRating": "4.9",
+    "bookingCost": "500",
+    "totalReviews": "11",
+    "bestPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Paneer Kabab",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Gulabjamun",
+        "prepThumbnail": "https://via.placeholder.com/150/771796"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "description": "accusamus beatae ad facilis cum similique qui sunt",
+    "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+    "FullName": "Karunakar Malik",
+    "AverageRating": "2.5",
+    "bookingCost": "700",
+    "totalReviews": "92",
+    "bestPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Mughlai Paratha",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Mutton Shorba",
+        "prepThumbnail": "https://via.placeholder.com/150/771796"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "description": "accusamus beatae ad facilis cum similique qui sunt",
+    "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
+    "FullName": "Ramesh Jadav",
+    "AverageRating": "4.1",
+    "bookingCost": "200",
+    "totalReviews": "36",
+    "bestPreperations": [
+      {
+        "prepId": "1",
+        "prepName": "Mutton Biryani",
+        "prepThumbnail": "https://via.placeholder.com/150/92c952"
+      },
+      {
+        "prepId": "2",
+        "prepName": "Jeera Aaloo",
+        "prepThumbnail": "https://via.placeholder.com/150/771796"
+      }
+    ]
+  }
+]

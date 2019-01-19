@@ -1,0 +1,82 @@
+<!-- 
+<ion-header>
+
+  <ion-navbar >
+    <ion-title>User Inputs</ion-title>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <google-places-autocomplete (callback)="detail($event[0])" location= 12.9716,77.5946 key="AIzaSyCi8FLrISnMd-t7nG_846T-Ls6ah5GgiFY"></google-places-autocomplete>
+ 
+    <ion-item>
+          <ion-label>Time</ion-label>
+          <ion-datetime displayFormat="MMM-DD, h:mm A" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      <br><br>
+      <button ion-button block (click)="searchNearbyChefs()">Search Chefs</button>
+
+</ion-content>
+ -->
+
+
+
+ <ion-header>
+
+  <ion-navbar >
+    <ion-title>User Inputs</ion-title>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-input style="  border: 1px solid #e0dbdb !important;
+      height: 65% !important;
+      font-size:14px;
+      border-radius:4px;width: 100%;" [(ngModel)]="query" (ngModelChange)="searchPlace()" placeholder="Enter location"></ion-input>
+     
+    </ion-item>
+   
+   
+
+    <ion-item>
+      <ion-datetime style="  border: 1px solid #e0dbdb !important;
+      height: 65% !important;
+      font-size:14px;
+      border-radius:4px;width: 100%;" displayFormat="MMM-DD-YYYY" [(ngModel)]="myDate1" placeholder="Enter Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-datetime style="  border: 1px solid #e0dbdb !important;
+      height: 65% !important;
+      font-size:14px;
+      border-radius:4px;width: 100%;" displayFormat="h:mm A" [(ngModel)]="myDate" placeholder="Enter Time"></ion-datetime>
+    </ion-item>
+    <div style="padding: 0px 10px 0px 15px;">
+    <button ion-button style="background: red;height: 2.6rem !important;  border-radius:4px;" block (click)="searchNearbyChefs()">Search Chefs</button>
+  </div>
+  </ion-list>
+</ion-card>
+<ion-list>
+  <ion-item *ngFor="let place of places" (touchstart)="selectPlace(place)">{{place.description}}</ion-item>
+</ion-list>
+<div #pleaseConnect id="please-connect">
+  <p>Please connect to the Internet...</p>
+</div>
+
+<div #map id="map">
+  <ion-spinner></ion-spinner>
+</div>
+</ion-content>
+
