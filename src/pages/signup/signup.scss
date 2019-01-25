@@ -1,4 +1,48 @@
 page-signup {
-
-   
+    ion-img {
+        display: inline-block;
+        min-width: 20px;
+        min-height: 20px;
+        background: none;
+        contain: none;
+    }
+   .sign_user{
+       color: #97989a;
+       font-size: 14px;
+       padding-left: 3%;
+       padding-right: 3%;
+   }
+   .text-input{
+    background-color: #f3f3f2;
+    height: 37px;
+    color:#b0b1b2;
+    text-align: center;
+    font-weight: 500;
+    padding: 5px;
+   }
+   .button-full-ios {
+    border-radius: 9px;
+}
+.button-full-md {
+    border-radius: 9px;
+}
+.button-ios {
+    border-radius: 4px;
+    height: 2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.button-md {
+    border-radius: 4px;
+    height: 2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.all_have_acc{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    font-size: 13px;
+}
 }

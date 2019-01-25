@@ -1,11 +1,46 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
+<ion-content padding class="home-background">
+  <div text-center>
+    <ion-img width="130" height="130" src="./../assets/imgs/ver-ph/jpLogo1.png"></ion-img>
+  </div>
+  <br>
+  <br>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <div class="coun_code">
+          <ion-img src="./../assets/imgs/ver-ph/flag.png" class="flag"></ion-img>
 
+          <p class="dial_code" text-right> +91</p>
+        </div>
+
+      </ion-col>
+
+      <ion-col col-9>
+        <ion-input type="text" placeholder="Enter Phone Number"></ion-input>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+  <button ion-button color="warning" full (click)="openOTPinputPanel()">Continue</button>
+
+  <p align="center" style="color:#fff">or</p>
+  <button ion-button color="light" class="light-bg" block (click)="loginGoogle()">
+    <span style="margin-right: 17px;
+    margin-bottom: 12px">
+      <ion-img src="./../assets/imgs/ver-ph/google.png" style="width:50%;" class="flag"></ion-img>
+    </span> Continue with Google</button>
+</ion-content>
+  <!-- <ion-img text-center class="center" src="./../assets/imgs/ver-ph/jpLogo1.png" style="align"></ion-img> -->
+  <!-- 
     <ion-item>
         <ion-label floating>Phone Number</ion-label>
         <ion-input type="number"  required></ion-input>
@@ -15,14 +50,14 @@
   <button ion-button color="light" full (click)="openOTPinputPanel()">Continue</button>
   <br>
   <p align="center">or</p><br>
-  <button ion-button color="danger" block (click)="loginGoogle()">Continue with Google</button>
+  <button ion-button color="danger" block (click)="loginGoogle()">Continue with Google</button> -->
 
   <!-- <div id="footer"> <button ion-button clear (click) = "chefLogin()">Chef Login</button></div> -->
- 
+
   <!-- <button ion-button (click)="ontoggleclick()">Navigate to select chef</button> -->
 
   <!-- <p>Name: {{user.name}}</p>
   <p>Email: {{user.email}}</p>
   <p>UserID: {{user.userId}}</p>
   <img [src] = "user.image" alt=""> -->
-</ion-content>
+  <!-- </ion-content> -->

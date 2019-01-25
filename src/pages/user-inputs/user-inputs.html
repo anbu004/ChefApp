@@ -27,56 +27,71 @@
 
 
 
- <ion-header>
+<ion-header>
 
-  <ion-navbar >
+  <!-- <ion-navbar>
     <ion-title>User Inputs</ion-title>
     <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-  </ion-navbar>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar> -->
 
 </ion-header>
 
-<ion-content>
-<ion-card>
-  <ion-list>
-    <ion-item>
-      <ion-input style="  border: 1px solid #e0dbdb !important;
+<ion-content class="userInput-background">
+  <div class="">
+    <button ion-button menuToggle style="background-color: #488aff00;">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </div>
+  <ion-card style="position: absolute;
+  z-index: 100;
+  top: 71px; box-shadow: 5px 5px 5px  #888888;">
+    <ion-list>
+      <ion-item>
+        <ion-input style="  border: 1px solid #e0dbdb !important;
       height: 65% !important;
       font-size:14px;
       border-radius:4px;width: 100%;" [(ngModel)]="query" (ngModelChange)="searchPlace()" placeholder="Enter location"></ion-input>
-     
-    </ion-item>
-   
-   
+        <!-- <ion-icon name="md-pin" item-right></ion-icon> -->
 
-    <ion-item>
-      <ion-datetime style="  border: 1px solid #e0dbdb !important;
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-datetime style="  border: 1px solid #e0dbdb !important;
       height: 65% !important;
       font-size:14px;
       border-radius:4px;width: 100%;" displayFormat="MMM-DD-YYYY" [(ngModel)]="myDate1" placeholder="Enter Date"></ion-datetime>
-    </ion-item>
-    <ion-item>
-      <ion-datetime style="  border: 1px solid #e0dbdb !important;
+      </ion-item>
+      <ion-item>
+        <ion-datetime style="  border: 1px solid #e0dbdb !important;
       height: 65% !important;
       font-size:14px;
       border-radius:4px;width: 100%;" displayFormat="h:mm A" [(ngModel)]="myDate" placeholder="Enter Time"></ion-datetime>
-    </ion-item>
-    <div style="padding: 0px 10px 0px 15px;">
-    <button ion-button style="background: red;height: 2.6rem !important;  border-radius:4px;" block (click)="searchNearbyChefs()">Search Chefs</button>
-  </div>
+      </ion-item>
+      <div style="padding: 0px 10px 0px 15px;">
+        <button ion-button style="background: #f78c15;height: 2.6rem !important;  border-radius:4px;" block (click)="searchNearbyChefs()">Search Chefs</button>
+      </div>
+    </ion-list>
+  </ion-card>
+  <ion-list style="    position: absolute;z-index: 10000;
+top: 117px;
+width: 86%;
+font-size: 10%;
+left: 26px;
+border-top:none;
+border: 1px solid #dad8d8;
+border-radius: 0px 0px 2px 2px;border-top: none;">
+    <ion-item style="    font-size: 13px !important;
+    padding-left: 5px;" *ngFor="let place of places" (click)="selectPlace(place)">{{place.description}}</ion-item>
   </ion-list>
-</ion-card>
-<ion-list>
-  <ion-item *ngFor="let place of places" (touchstart)="selectPlace(place)">{{place.description}}</ion-item>
-</ion-list>
-<div #pleaseConnect id="please-connect">
-  <p>Please connect to the Internet...</p>
-</div>
+  <div #pleaseConnect id="please-connect">
+    <p>Please connect to the Internet...</p>
+  </div>
 
-<div #map id="map">
-  <ion-spinner></ion-spinner>
-</div>
+  <div #map id="map">
+    <ion-spinner></ion-spinner>
+  </div>
 </ion-content>
-

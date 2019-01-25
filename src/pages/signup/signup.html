@@ -1,12 +1,28 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>Sign Up</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-    
+  <ion-content padding class="home-background">
+    <div text-center>
+      <ion-img width="130" height="130" src="./../assets/imgs/ver-ph/jpLogo2.png"></ion-img>
+      <h3 style="color:#c4393a">Jeera Powder</h3>
+      <p class="sign_user">Few Steps away to towards best services Create an account</p>
+    </div>
+    <div text-center style="padding-left: 3%;
+        padding-right: 3%;">
+      <ion-input type="text" placeholder="Full Name"></ion-input>
+      <ion-input type="text" placeholder="Email"></ion-input>
+      <ion-input type="text" placeholder="Phone Number"></ion-input>
+      <div>
+        <button ion-button color="danger" style="background-image: linear-gradient(to right top, #c1383b, #c1383b, #db583c, #e7683d, #f2783d);"
+          full (click)="onSignupClick()">SIGN UP</button>
+      </div>
 
+    </div>
+    <!-- 
   <ion-list>
     <ion-item>
       <ion-label floating>Full Name</ion-label>
@@ -26,6 +42,11 @@
 
   <div padding>
     <button ion-button color="primary" block (click)="onSignupClick()">Sign Up</button>
-  </div>
-</ion-content>
+  </div> -->
+    <div text-center>
+      <p class="all_have_acc">Already have an account ?
+        <span style="color:#c4393a">SIGN IN</span>
+      </p>
+    </div>
 
+  </ion-content>

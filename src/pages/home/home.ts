@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController,MenuController, ModalController } from 'ionic-angular';
 import { SelectChefPage } from '../select-chef/select-chef';
 import { ChefProfilePage } from '../chef-profile/chef-profile';
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -13,10 +13,15 @@ import { OtpInputPanelPage } from '../otp-input-panel/otp-input-panel';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private googlePlus: GooglePlus, private http: HttpClient, private modal:ModalController) {
+  constructor(private menu: MenuController, public navCtrl: NavController, private googlePlus: GooglePlus, private http: HttpClient, private modal:ModalController) {
 
   }
+  ionViewDidEnter() {
+    this.menu.swipeEnable(false);
 
+    // If you have more than one side menu, use the id like below
+    // this.menu.swipeEnable(false, 'menu1');
+  }
   user:any = {};
   ontoggleclick(){
 

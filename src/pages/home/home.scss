@@ -1,12 +1,100 @@
 page-home {
-
-    #footer {
-   position:absolute;
-   width:50%;
-   text-align: center;
-   bottom:0;
-   width:100%;
-   height:60px;
+    .home-background {
+        background: url("./../assets/imgs/ver-ph/bg.png") no-repeat fixed center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+ion-img {
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    background: none;
+    contain: none;
 }
+.input-cover{
+    // border-bottom:1px solid #fff !important;
+    // color:#fff;
+    // margin-top: 8px;
+}
+ion-input{
+    color:#fff;
+    margin-top: 7px;
+    border-bottom: 1px solid #fff;
+}
+.button-ios {
+    border-radius: 4px;
+    height: 2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.button-md {
+    border-radius: 4px;
+    height: 2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.flag{
+    margin-top: 12px;
+}
+.dial_code{
+    margin-top: -23px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+.coun_code{
+    border-bottom: 1px solid #fff;
+    padding: 0px;
+    color:#fff;
+}
+.button-full-md {
+    border-radius: 9px;
+}
+.text-input-md  {
+    margin: 9px 8px 0px 10px;
+    padding-bottom: 4px;
+    color: #fff;
+    font-size: 13px;
+}
+.button-full-ios{
+    border-radius: 9px;
+}
+.text-input-ios {
+    margin: 9px 8px 0px 10px;
+    padding-bottom: 4px;
+    color: #fff;
+    font-size: 13px;
+}
+.light-bg{
+    border: 1px solid #fff !important;
+    border-radius: 9px !important;
+    color: #fff !important;
+}
+.text-input::-moz-placeholder {
+    color: white;
+  }
+  
+  .text-input:-ms-input-placeholder {
+    color: white;
+  }
+  
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: white;
+  }
+// .center {
+//     margin-left: auto;
+//     margin-right: auto;
+//     display: block;
+// }
 
+// ion-img {
+//     object-fit: resize;
+//     height: 100%;
+//     width: auto !important;
+//     border: 0;
+//     padding: 0;
+   
+// }
 }

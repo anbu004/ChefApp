@@ -11,127 +11,128 @@ import { GoogleMaps } from '../../providers/google-maps/google-maps';
 
 @IonicPage()
 @Component({
-  selector: 'page-user-inputs',
-  templateUrl: 'user-inputs.html',
+    selector: 'page-user-inputs',
+    templateUrl: 'user-inputs.html',
 })
 export class UserInputsPage {
 
-  // constructor(public navCtrl: NavController, public navParams: NavParams) {
+    // constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-  // }
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad UserInputsPage');
-  // }
+    // }
+    // ionViewDidLoad() {
+    //   console.log('ionViewDidLoad UserInputsPage');
+    // }
 
-  // searchNearbyChefs() {
-  //   //some service call code
-  //   this.navCtrl.push(SelectChefPage);
-  // }
+    // searchNearbyChefs() {
+    //   //some service call code
+    //   this.navCtrl.push(SelectChefPage);
+    // }
 
-  // detail(event) {
-  //   console.log(event);
-  //   console.log(event.place_id);
-  // }
+    // detail(event) {
+    //   console.log(event);
+    //   console.log(event.place_id);
+    // }
 
 
 
-  @ViewChild('map') mapElement: ElementRef;
-  @ViewChild('pleaseConnect') pleaseConnect: ElementRef;
+    @ViewChild('map') mapElement: ElementRef;
+    @ViewChild('pleaseConnect') pleaseConnect: ElementRef;
 
-  latitude: number;
-  longitude: number;
-  autocompleteService: any;
-  placesService: any;
-  query: string = '';
-  places: any = [];
-  searchDisabled: boolean;
-  saveDisabled: boolean;
-  location: any;  
+    latitude: number;
+    longitude: number;
+    autocompleteService: any;
+    placesService: any;
+    query: string = '';
+    places: any = [];
+    searchDisabled: boolean;
+    saveDisabled: boolean;
+    location: any;
 
-  constructor(public navCtrl: NavController, public zone: NgZone, public maps: GoogleMaps, public platform: Platform, public geolocation: Geolocation, public viewCtrl: ViewController) {
-      this.searchDisabled = true;
-      this.saveDisabled = true;
-  }
+    constructor(public navCtrl: NavController, public zone: NgZone, public maps: GoogleMaps, public platform: Platform, public geolocation: Geolocation, public viewCtrl: ViewController) {
+        this.searchDisabled = true;
+        this.saveDisabled = true;
+    }
 
-  ionViewDidLoad(): void {
+    ionViewDidLoad(): void {
 
-      let mapLoaded = this.maps.init(this.mapElement.nativeElement, this.pleaseConnect.nativeElement).then(() => {
+        let mapLoaded = this.maps.init(this.mapElement.nativeElement, this.pleaseConnect.nativeElement).then(() => {
 
-          this.autocompleteService = new google.maps.places.AutocompleteService();
-          this.placesService = new google.maps.places.PlacesService(this.maps.map);
-          this.searchDisabled = false;
+            this.autocompleteService = new google.maps.places.AutocompleteService();
+            this.placesService = new google.maps.places.PlacesService(this.maps.map);
+            this.searchDisabled = false;
 
-      }); 
+        });
 
-  }
+    }
 
-  selectPlace(place){
-console.log(place);
-      this.places = [];
+    selectPlace(place) {
+        this.query = place.description;
+        console.log(place);
+        this.places = [];
 
-      let location = {
-          lat: null,
-          lng: null,
-          name: place.name
-      };
+        let location = {
+            lat: null,
+            lng: null,
+            name: place.name
+        };
 
-      this.placesService.getDetails({placeId: place.place_id}, (details) => {
+        this.placesService.getDetails({ placeId: place.place_id }, (details) => {
 
-          this.zone.run(() => {
+            this.zone.run(() => {
 
-              location.name = details.name;
-              location.lat = details.geometry.location.lat();
-              location.lng = details.geometry.location.lng();
-              this.saveDisabled = false;
+                location.name = details.name;
+                location.lat = details.geometry.location.lat();
+                location.lng = details.geometry.location.lng();
+                this.saveDisabled = false;
 
-              this.maps.map.setCenter({lat: location.lat, lng: location.lng}); 
+                this.maps.map.setCenter({ lat: location.lat, lng: location.lng });
 
-              this.location = location;
+                this.location = location;
 
-          });
+            });
 
-      });
+        });
 
-  }
+    }
 
-  searchPlace(){
-console.log("jjjdiu");
-      this.saveDisabled = true;
+    searchPlace() {
+        console.log("jjjdiu");
+        this.saveDisabled = true;
 
-      if(this.query.length > 0 && !this.searchDisabled) {
+        if (this.query.length > 0 && !this.searchDisabled) {
 
-          let config = {
-              types: ['geocode'],
-              input: this.query
-          }
+            let config = {
+                types: ['geocode'],
+                input: this.query
+            }
 
-          this.autocompleteService.getPlacePredictions(config, (predictions, status) => {
+            this.autocompleteService.getPlacePredictions(config, (predictions, status) => {
 
-              if(status == google.maps.places.PlacesServiceStatus.OK && predictions){
+                if (status == google.maps.places.PlacesServiceStatus.OK && predictions) {
 
-                  this.places = [];
+                    this.places = [];
 
-                  predictions.forEach((prediction) => {
-                      this.places.push(prediction);
-                      console.log(this.places);
-                  });
-              }
+                    predictions.forEach((prediction) => {
+                        this.places.push(prediction);
+                        console.log(this.places);
+                    });
+                }
 
-          });
+            });
 
-      } else {
-          this.places = [];
-      }
+        } else {
+            this.places = [];
+        }
 
-  }
+    }
 
-  save(){
-      this.viewCtrl.dismiss(this.location);
-  }
+    save() {
+        this.viewCtrl.dismiss(this.location);
+    }
 
-  close(){
-      this.viewCtrl.dismiss();
-  }   
+    close() {
+        this.viewCtrl.dismiss();
+    }
 }
 
 
